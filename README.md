@@ -4,12 +4,12 @@ Hoy implementaremos un sistema de usuarios en nuestra aplicación de tareas y le
 
 > Deben correr el proyecto en un nuevo ambiente virtual utilizando el `requirements.txt` que tiene este proyecto.
 
-1. `python3 -m venv myvenv` en Linux o `python -m venv myvenv` en Windows para crear el nuevo ambiente virtual.
-2. `source myvenv/bin/activate` en Linux o `myvenv\Scripts\activate` en Windows para iniciar el ambiente virtual.
+1. `python3 -m venv env` en Linux o `python -m venv env` en Windows para crear el nuevo ambiente virtual. Creenlo dentro de la carpeta del proyecto.
+2. `source env/bin/activate` en Linux o `env\Scripts\activate` en Windows para iniciar el ambiente virtual.
 3. `python -m pip install --upgrade pip`
 4. `pip install -r requirements.txt`
 
-Hola vamos a agregarle usuarios a nuestra aplicación para que cada uno tenga su propia lista de tareas.
+Ahora  vamos a agregarle usuarios a nuestra aplicación.
 
 ## Actividad
 ### [Parte 0: Borrar la Base de Datos]
@@ -152,7 +152,6 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
    
    Para esto vamos a editar `todoapp/views.py` y diferenciar estos dos casos: 
    ```python
-   from django.http import HttpResponseRedirect
    def register_user(request):
        if request.method == 'GET': #Si estamos cargando la página
         return render(request, "todoapp/register_user.html") #Mostrar el template
@@ -174,7 +173,8 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
     
    ```python
    #Estos son los imports que van al inicio de views.py
-   from todoapp.models import User       
+   from todoapp.models import User
+   from django.http import HttpResponseRedirect
     ```
    
    En el código anterior, cuando el método es POST estamos haciendo lo siguiente: 
@@ -199,10 +199,10 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
         admin.site.register(Tarea)
     ```
        
-       * Crea un superusuario haciendo ```python manage.py createsuperuser```. 
+       * Crea un superusuario haciendo ```python manage.py createsuperuser```. Les va a pedir datos como nombre de usuario, email, contraseña. Llenen con datos cualquiera, pero memoricen el usuario y la contraseña.
        
        * Luego ingresa a 127.0.0.1:8000/admin y deberías poder ver todos los Users que has creado! 
-       ![vista admin con my_user](vista_myuser_admin.png)
+       ![vista admin con my_user](admin-django-usuarios.png)
 
 
 
@@ -210,9 +210,11 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
 
 ### [Parte 2: Embellecer el register]
 
-En esta actividad deben usar las propiedades CSS y Bootstrap para obtener un resultado similar a este:
+Ahora deben usar las propiedades CSS y Bootstrap para obtener un resultado similar a este:
 
-Solo deben trabajar con el archivo `register.html` que está en `todoapp/templates/todoapp/`, y con `style.css` que está en `todoapp/static/todoapp/`.
+![Vista yassificada del login](yassified-login.png)
+
+Solo deben trabajar con el archivo `register.html` que está en `todoapp/templates/todoapp/`, y con `style.css` que deben crear en `todoapp/static/todoapp/` (directorio static/todoapp también lo deben crear).
 
 ### Enlazar hoja de estilos y Bootstrap:
 
@@ -223,7 +225,9 @@ Solo deben trabajar con el archivo `register.html` que está en `todoapp/templat
 <!-- Estilos de Bootstrap: No se usará para esta actividad -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 ```
-Estas líneas deben ir dentro del `<head>...</head>` de su archivo .html. Luego podrán usar los estilos que definan en el archivo style.css, o los estilos de Bootstrap guiándose por la documentación (por ejemplo, [los botones](https://getbootstrap.com/docs/5.1/components/buttons/))
+Estas líneas deben ir dentro del `<head>...</head>` de su archivo .html. Luego podrán usar los estilos que definan en el archivo style.css, o los estilos de Bootstrap guiándose por la documentación (por ejemplo, [los botones](https://getbootstrap.com/docs/5.1/components/buttons/)). Con solo linkear los estilos de Bootstrap, ya se notará un cambio en la interfaz.
+
+> Quizá no se vea reflejados los cambios. Tendrán que probar cortando la página y volviendola a correr con `python manage.py runserver`.
 
 ### Enlaces
 - [Selectores de CSS](https://www.w3schools.com/cssref/css_selectors.asp)
