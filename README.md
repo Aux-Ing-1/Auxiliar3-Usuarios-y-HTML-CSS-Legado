@@ -212,7 +212,7 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
 
 Ahora deben usar las propiedades CSS y Bootstrap para obtener un resultado similar a este:
 
-![Vista yassificada del login](yassified-login.png)
+![Vista yassificada del login](yassified-register.png)
 
 Solo deben trabajar con el archivo `register.html` que está en `todoapp/templates/todoapp/`, y con `style.css` que deben crear en `todoapp/static/todoapp/` (directorio static/todoapp también lo deben crear).
 
