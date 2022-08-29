@@ -6,7 +6,7 @@ Hoy implementaremos un sistema de usuarios en nuestra aplicación de tareas y le
 
 1. `python3 -m venv env` en Linux o `python -m venv env` en Windows para crear el nuevo ambiente virtual. Creenlo dentro de la carpeta del proyecto.
 2. `source env/bin/activate` en Linux o `env\Scripts\activate` en Windows para iniciar el ambiente virtual.
-3. `python -m pip install --upgrade pip`
+3. `python -m pip install --upgrade pip` o solo `pip install --upgrade pip`
 4. `pip install -r requirements.txt`
 
 Ahora  vamos a agregarle usuarios a nuestra aplicación.
