@@ -214,7 +214,7 @@ Ahora deben usar las propiedades CSS y Bootstrap para obtener un resultado simil
 
 ![Vista yassificada del login](yassified-register.png)
 
-Solo deben trabajar con el archivo `register.html` que está en `todoapp/templates/todoapp/`, y con `style.css` que deben crear en `todoapp/static/todoapp/` (directorio static/todoapp también lo deben crear).
+Solo deben trabajar con el archivo `register_user.html` que está en `todoapp/templates/todoapp/`, y `style.css` que deben crear en `todoapp/static/todoapp/` (directorio static/todoapp también lo deben crear).
 
 ### Enlazar hoja de estilos y Bootstrap:
 
