@@ -33,6 +33,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#Se utilizara el modelo user
+AUTH_USER_MODEL = 'todoapp.User'
 
 # Application definition
 
