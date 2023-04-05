@@ -84,7 +84,7 @@ Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migra
    2.3 __Templates__
    
    Finalmente tenemos que crear el formulario para registrar al usuario. 
-   Este lo guardaremos en `templates/todoapp/register_user.html` y llevará lo siguiente: 
+   Este lo guardaremos en `/todoapp/templates/register_user.html` y llevará lo siguiente: 
    ```html
         <!DOCTYPE html>
         <html lang="en">
