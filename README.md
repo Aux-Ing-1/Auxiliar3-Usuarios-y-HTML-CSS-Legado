@@ -8,6 +8,7 @@ Hoy implementaremos un sistema de usuarios en nuestra aplicación de tareas y le
 2. `source env/bin/activate` en Linux o `env\Scripts\activate` en Windows para iniciar el ambiente virtual.
 3. `python -m pip install --upgrade pip` o solo `pip install --upgrade pip`
 4. `pip install -r requirements.txt`
+5. Si no encuentra el archivo requirements.txt posiblemente no esté dentro de la carpeta del proyecto.
 
 Ahora  vamos a agregarle usuarios a nuestra aplicación.
 
@@ -16,7 +17,7 @@ Ahora  vamos a agregarle usuarios a nuestra aplicación.
 Como hoy cambiaremos el modelo de usuarios predeterminado de Django, habrá que comenzar la base de datos desde 0. 
 Esto significa eliminar todas las migraciones y la base de datos de sqlite. 
 
-Para esto tendrás que borrar la carpeta `todoapp/migrations`, `categorias/migrations` y el archivo `db.sqlite3`. 
+Para esto tendrás que borrar la carpeta `todoapp/migrations` y `categorias/migrations`. 
 > Esto solo se hará hoy y al inicio de todo, nunca debería haber necesidad de borrar todo y empezar denuevo. 
 
 ### [Parte 1: Crear Usuarios]
